@@ -1,2 +1,3 @@
 # LED-SYNC
-connects user input to microprocessor for led adjustments
+INDEX - base html source for website front end
+PLUGIN - php embedded
