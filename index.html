@@ -1,34 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TEST</title>
-  <script>
-  	function addImage(){
-  		var img = document.createElement("img");
-  		img.src = "https://scontent.fbos1-1.fna.fbcdn.net/v/t1.0-9/15253564_1536478049714589_822758100946470831_n.jpg?oh=085bf9ea73dc8bac4df3c1f685862781&oe=58DBDCD2";
-		document.body.appendChild(img);
-  }
-    function testClick(){
-    	alert("How dare you press the button!\nNow you must proceed to answer a question")
-    	var person = prompt("YOU DONE MESSED UP ALEX-AY\nPlease enter your first name in lower case", "cutie pie");
-    	if (person !== null){
-    		document.getElementById("demo").innerHTML = "Hello " +person+ "! How are you today?";
-    		if (person === 'alexa'){
-    			document.getElementById("newPic").innerHTML = addImage();
-    		}
-    	}
-    }
-  </script>
+	<title>date and time</title>
+	<script>
+		function setDate(){
+			var date = new Date();
+			var hour = date.getHours();
+			var minute = date.getMinutes();
+			var month = date.getMonth() + 1;
+			var current = [month, hour, minute];
+			document.getElementById("datePlace").innerHTML = current[0] + "-" + current[1] + "-" + current[2];
+		}
+	</script>
 </head>
-<body>
-  <p>
-    <h2>THIS IS A TEST</h2>
-    <h3>This is a <a href = "http://www.google.com">link</a> to Google if you have questions </h3>
-  </p>
-
-  <p><h6>ps Alexa is awesome</h6></p>
-  <p><button onclick="testClick()">DO NOT CLICK ME!</button></p>
-  <p id="newPic"></p>
-  <p id="demo"></p>
+<body onload="setDate()">
+	<p id="datePlace"></p>
 </body>
 </html>
