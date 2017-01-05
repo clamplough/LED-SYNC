@@ -27,7 +27,7 @@ function showStatus(){
     case "illuminated":
       var pos = colors.indexOf(secondary);
       //selectMode(0);
-      alert("about to write");
+      alert(pos);
       writeIllumHTML(pos);
       break;
   /*  case "ambient":
