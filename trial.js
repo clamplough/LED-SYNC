@@ -27,10 +27,10 @@ function showStatus(){
   switch(statusArray[0]){
     case "illuminated":
       var pos = colors.indexOf(secondary);
-      selectMode(0);
+      //selectMode(0);
       writeIllumHTML(pos);
       break;
-    case "ambient":
+  /*  case "ambient":
       selectMode(1);
       break;
     case "sweep":
@@ -44,10 +44,12 @@ function showStatus(){
       break;
     default:
       document.getElementById(divDefault).innerHTML = "Accessing the current mode failed, please make new selection";
+      */
   }
 }
 
 function writeIllumHTML(N){
+  alert("writing");
   var common = '<input type="radio" name="mode" value=';
   var color = ["white", "turquoise", "green", "yellow", "orange", "red", "pink", "purple", "blue", "custom"];
   var word = color;
