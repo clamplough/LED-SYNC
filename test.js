@@ -19,15 +19,15 @@ function loadState(){
 }
 
 function showStatus(){
-    alert("showStatus");
   status = status.toLowerCase();
   var statusArray = status.split("|");
   secondary = statusArray[1];
-  alert(statusArray);
+  alert(secondary);
   switch(statusArray[0]){
     case "illuminated":
       var pos = colors.indexOf(secondary);
       //selectMode(0);
+      alert("about to write");
       writeIllumHTML(pos);
       break;
   /*  case "ambient":
