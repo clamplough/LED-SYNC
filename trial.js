@@ -8,7 +8,6 @@ function loadState(){
   xhr = new XMLHttpRequest();
   xhr.open('GET', 'testfile.txt', true);
   xhr.onreadystatechange = function(){
-    alert("here");
     if(xhr.readyState === 4){
       if(xhr.status == 200){
           status = xhr.responseText;
@@ -17,7 +16,6 @@ function loadState(){
     }
   }
   xhr.send();
-    alert(xhr.readyState+"---"+xhr.status);
 }
 
 function showStatus(){
@@ -63,8 +61,4 @@ function writeIllumHTML(N){
     content.innerHTML = word[i];
     document.getElementById("demo").appendChild(content);
   }
-}
-
-function clickBait(){
-  alert("you have clicked");
 }
